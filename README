@@ -4,12 +4,17 @@ Simple, yet useful git command to set current JIRA ticket you are working on.
 
 Saves time - set once, and it will auto-append JIRA ticket code to your commit messages.
 
+
+Intallation:
+    Put it anywhere so it is visible in your $PATH.
+
+
 Usage:
-        git jira [-arg1, --arg2...]
-                commit with current JIRA ticket code. Args are passed to 'git commit'.
-        git jira set [CODE]
-                set current JIRA ticket to 'CODE', if specified, or clean existing one.
-        git jira show
-                show current JIRA ticket code.
-        git jira file
-                show the file path where the ticket code is stored.
+    git jira [-arg1, --arg2...]
+        commit with current JIRA ticket code. Args are passed to 'git commit'.
+    git jira set [CODE]
+        set current JIRA ticket to 'CODE', if specified, or clean existing one.
+    git jira show
+        show current JIRA ticket code.
+    git jira file
+        show the file path where the ticket code is stored.
