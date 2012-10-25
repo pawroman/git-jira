@@ -1,1 +1,3 @@
-/home/roman/bin/git-jcommit
+#!/bin/bash
+
+git jira commit $@
