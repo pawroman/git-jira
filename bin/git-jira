@@ -9,14 +9,18 @@ usage()
     echo    "Saves time - set once, and it will auto-append JIRA ticket code to your commit messages."
     echo
     echo    "Usage:"
-    echo -e "\tgit jira [-arg1, --arg2...]"
-    echo -e "\t\tcommit with current JIRA ticket code. Args are passed to 'git commit'."
-    echo -e "\tgit jira set [CODE]"
-    echo -e "\t\tset current JIRA ticket to 'CODE', if specified, or clean existing one."
-    echo -e "\tgit jira show"
-    echo -e "\t\tshow current JIRA ticket code."
-    echo -e "\tgit jira file"
-    echo -e "\t\tshow the file path where the ticket code is stored."
+    echo -e "  git jira [-arg1, --arg2...]"
+    echo -e "  \tcommit with current JIRA ticket code. Args are passed to 'git commit'."
+    echo -e "  git jira set [CODE]"
+    echo -e "  \tset current JIRA ticket to 'CODE', if specified, or clean existing one."
+    echo -e "  git jira clean"
+    echo -e "  \tclean existing JIRA ticket code."
+    echo -e "  git jira show"
+    echo -e "  \tshow current JIRA ticket code."
+    echo -e "  git jira file"
+    echo -e "  \tshow the file path where the ticket code is stored."
+    echo -e "  git jira help"
+    echo -e "  \tshow help&usage message and exit."
 }
 
 
@@ -79,12 +83,12 @@ case "$1" in
         fi
         ;;
 
-    -* )
-        ticket_commit $@
+    help | -h )
+        usage
         ;;
 
-    help | -h)
-        usage
+    -* )
+        ticket_commit $@
         ;;
 
     * )
